@@ -1,0 +1,361 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*ヘッダー ----------------------*/
+#headder {
+    background-color: #fff;
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+#headder a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo_container {
+    padding: 0 4.2vw ;
+    max-width: 27.4rem;
+    min-width: 18.2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: block;
+    width:  12vw;
+    min-width: 12.2rem;
+    max-width: 15.4rem;
+    vertical-align: middle;
+}
+
+
+.navi_container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi {
+    height:  100%;
+    width: 36vw;
+    max-width: 34.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.09em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);;
+}
+
+.navi_item {
+    height:  100%;
+    list-style: none;
+    position: relative;
+}
+
+.navi_item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.navi_item::after {
+    content: '';
+    display: block;
+    background: #D09F51;
+    height: 3px;
+    width: 0;
+    margin: 1.6rem auto 0;
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+}
+
+.navi_item:hover::after {
+    width: 100%;
+}
+
+.header_button {
+    color: #fff;
+    height: 100%;
+    font-size: 1.4rem;
+    letter-spacing: 0.09em;
+}
+
+.header_button:hover {
+    filter: drop-shadow(0 0 10px #D09F51);
+    transition: all .5s ease-in-out;
+}
+
+.header_button a {
+    background-color: #D09F51;
+    padding: 0 4.2vw;
+    max-width: 21rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language {
+    position: fixed;
+    bottom: 4.4rem;
+    left: 6rem;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+#headder .language a {
+    color: #BABABA;
+}
+
+#headder .language a:hover {
+    filter: drop-shadow(0 0 15px #D09F51);
+    transition: all .5s ease-in-out;
+}
+
+/*ヒーローエリア ---------------------- */
+
+.heroarea {
+    width: 100vw;
+    height: 506px;
+    background-image: url(../img/hero_01.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center
+}
+
+.heroarea_text {
+    color: #fff;
+    font-size: 5.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    padding: 0 10vw;
+    position: relative;
+    top: -5%;
+}
+
+
+/* セクションの共通設定 ----------------------*/
+
+.section_title {
+    height: 6.4rem;
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 0.24em;
+    margin-bottom: 9rem;
+}
+
+.section_title::after {
+    content: '';
+    display: block;
+    background: #D09F51;
+    height: 3px;
+    width: 6rem;
+    margin: 2.4rem auto 0;
+}
+
+
+/* コンセプト ----------------------*/
+
+#concept {
+    padding: 16rem 0 21rem;
+}
+
+.concept_image {
+    width: calc(100% - 6rem);
+    max-width: 95rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 9.6rem;
+}
+
+.concept_text {
+    width: calc(100% - 6rem);
+    max-width: 75rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* ベネフィット ----------------------*/
+
+#benefits {
+    background-color: #1A1A1A;
+    color: #fff;
+    padding: 13.6rem 0  14.5rem;
+}
+
+#benefits .section_title {
+    margin-bottom: 13rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.card_image {
+    width: 50%;
+}
+
+.card_description {
+    width: calc(36.5rem + 6rem);
+    height: auto;
+    margin: 0 auto;
+    padding: 3rem
+}
+
+.card_number {
+    font-size: 1.4rem;
+    letter-spacing: 0.23em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.card_number_decoration {
+    font-weight: bold;
+    font-size: 2.3rem;
+    color: #D09F51;
+    margin-left: 1rem;
+    position: relative;
+    top: -1px;
+}
+
+.card_headder {
+    font-size: 2.8rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 3.8rem;
+}
+
+.card_text {
+    color: #C7C7C7;
+    font-size: 1.6rem;
+    line-height: 1.44;
+}
+
+
+/* コンタクト ----------------------*/
+
+#contact {
+    background-color: #D09F51;
+    color: #fff;
+    padding: 12rem 0;
+}
+
+.contact_container {
+    width: calc(100% - 6rem);
+    max-width: 66rem;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact_header {
+    font-size: 2.6rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.2;
+}
+
+.contact_read {
+    font-size: 2.2rem;
+    margin-bottom: .8rem;
+}
+
+.contact_text {
+    font-size: 1.8rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.16;
+}
+
+.contact_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_button {
+    background-color: #fff;
+    color: #D09F51;
+    font-size: 1.5rem;
+    width: 22rem;
+    height: 6.4rem;
+    margin-right: 3rem;
+    justify-content: center;
+    display: flex;
+}
+
+.contact_button a {
+    position: absolute;
+    width: 22rem;
+    height: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact_button:hover {
+    filter: drop-shadow(0 0 10px #fff);
+    transition: all .5s ease-in-out;
+}
+
+.contact_button:nth-child(2) {
+    margin-right: 0;
+}
+
+
+/* フッター ----------------------*/
+
+#footer {
+    background-color: #1A1A1A;
+    color: #C7C7C7;
+    font-size: 1.1rem;
+    letter-spacing: 0.046em;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer_primary {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+
+/*メディアクエリ ----------------------*/
+
+/*タブレット以下 ----------------------*/
+@media (max-width: 800px) {
+    .hero_text {
+        font-size: 3.5rem; //最大値
+    }
+}
+
+/*PCワイド ----------------------*/
+@media (min-width: 1200px) {
+    .hero_text {
+        font-size: 5.8rem; //最大値
+    }
+}
