@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,27 +11,27 @@
 </head>
 
 <body>
-
     <header id="headder">
         <h1 class="logo_container"><a href="/"><img class="logo" src="./img/gridman_logo.png" alt="logo"></a></h1>
-        <nav class="navi">
-            <ul class="navi_container">
-                <li class="navi_item"><a href="#concept">CONCEPT</a></li>
-                <li class="navi_item"><a href="#benefits">BENEFITS</a></li>
-                <li class="navi_item"><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
+        <div class="menu">
+            <nav class="nav">
+                <ul class="nav_container">
+                    <li class="nav_item"><a href="#concept">CONCEPT</a></li>
+                    <li class="nav_item"><a href="#benefits">BENEFITS</a></li>
+                    <li class="nav_item"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header_button"><a href="/">REGISTER</a></div>
+        </div>
         <p class="language">EN <a href="/">AR</a></p>
-        <div class="header_button"><a href="/">REGISTER</a></div>
+        <button class="menu-btn"></button>
     </header>
-
     <div id="main">
         <div class="heroarea">
             <h2 class="heroarea_text">Beside you seeking a<br>
                 golden and platinum experience.
             </h2>
         </div>
-
         <section id="concept">
             <h3 class="section_title">CONCEPT</h3>
             <img class="concept_image" src="./img/concept_01.jpg" alt="サンプル">
@@ -39,7 +39,6 @@
                 The world's first membership concierge service for the Arab region, providing a platinum experience in the golden country of Japan.<br><br>Beside you seeking a golden and platinum experience.
             </p>
         </section>
-
         <section id="benefits">
             <h3 class="section_title">BENEFITS</h3>
             <article class="card">
@@ -47,32 +46,37 @@
                 <div class="card_description">
                     <p class="card_number">BENEFITS<span class="card_number_decoration">01</span></p>
                     <h4 class="card_headder">Arabic call center</h4>
-                    <p class="card_text">You can contact the call center when you stay in Japan or anywhere in the world. We will support you in Arabic during your stay in Japan and provide peace of mind.</p>
+                    <p class="card_text">You can contact the call center when you stay in Japan or anywhere in the world.<br>
+                        We will support you in Arabic during your stay in Japan and provide peace of mind.</p>
                 </div>
             </article>
             <article class="card">
+                <img class="card_image" src="./img/benefits_02.jpg" alt="サンプル">
                 <div class="card_description">
                     <p class="card_number">BENEFITS<span class="card_number_decoration">02</span></p>
                     <h4 class="card_headder">Higher service from airport to hotel</h4>
-                    <p class="card_text">Elite A / J members will be able to experience Japan's finely-tuned services from the time they enter Japan. By pre-booking your itinerary and booking, you will be able to get a comfortable transfer from the airport to the hotel in a luxury van without having to travel by taxi or bus.</p>
+                    <p class="card_text">Elite A / J members will be able to experience Japan's finely-tuned services from the time they enter Japan.<br><br>
+                        By pre-booking your itinerary and booking, you will be able to get a comfortable transfer from the airport to the hotel in a luxury van without having to travel by taxi or bus.</p>
                 </div>
-                <img class="card_image" src="./img/benefits_02.jpg" alt="サンプル">
             </article>
             <article class="card">
                 <img class="card_image" src="./img/benefits_03.jpg" alt="サンプル">
                 <div class="card_description">
                     <p class="card_number">BENEFITS<span class="card_number_decoration">03</span></p>
                     <h4 class="card_headder">Providing restaurant information and making reservations</h4>
-                    <p class="card_text">In Japan, you can enjoy a variety of delicious meals. Elite A / J customers request from a number of affiliated restaurants We provide you with information on restaurants that are suitable for you, and you can enjoy your meal with reservations and payments completed.</p>
+                    <p class="card_text">In Japan, you can enjoy a variety of delicious meals. Elite A / J customers request from a number of affiliated restaurants.<br>
+                        We provide you with information on restaurants that are suitable for you, and you can enjoy your meal with reservations and payments completed.</p>
                 </div>
             </article>
             <article class="card">
+                <img class="card_image" src="./img/benefits_04.jpg" alt="サンプル">
                 <div class="card_description">
                     <p class="card_number">BENEFITS<span class="card_number_decoration">04</span></p>
                     <h4 class="card_headder">Attend service</h4>
-                    <p class="card_text">Elite A / J members can optionally use an Arabic attendant interpreter. Japanese is indispensable for Japan's deep history and conversations with local Japanese. Elite A / J has a large number of valuable Arabic and Japanese fluent personnel, and will make your stay experience more platinum.</p>
+                    <p class="card_text">Elite A / J members can optionally use an Arabic attendant interpreter.<br>
+                        Japanese is indispensable for Japan's deep history and conversations with local Japanese.<br><br>
+                        Elite A / J has a large number of valuable Arabic and Japanese fluent personnel, and will make your stay experience more platinum.</p>
                 </div>
-                <img class="card_image" src="./img/benefits_04.jpg" alt="サンプル">
             </article>
         </section>
         <section id="contact">
@@ -89,7 +93,6 @@
                 <div class="contact_button_container">
                     <div class="contact_button"><a href="/">REGISTER</a></div>
                     <div class="contact_button"><a href="/">CONTACT</a></div>
-
                 </div>
             </div>
         </section>
@@ -101,7 +104,7 @@
                 ©︎ 2020 GRIDMAN Consulting
             </p>
         </footer>
-
-
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body></html>
