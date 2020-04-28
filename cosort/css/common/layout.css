@@ -1,0 +1,670 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+/*------------------------------------------------------------
+	デフォルトスタイル
+------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	font-size: 1em;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body, table, input, textarea, select, option {
+	font-family: 'Noto Sans JP'," sans-serif";
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+img {
+	vertical-align: top;
+	max-width: 100%;
+}
+a,
+a:link {
+	color: #101010;
+	text-decoration: none;
+	transition: all .3s;
+}
+a:visited {
+	color: #101010;
+}
+a:hover {
+	color: #101010;
+}
+a:active {
+	color: #101010;
+}
+/*------------------------------------------------------------
+	レイアウト
+------------------------------------------------------------*/
+body {
+	min-width: 1280px;
+	color: #101010;
+	font-size: 1.7rem;
+	line-height: 1.588;
+	font-weight: 500;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	background-color: #FFF;
+}
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#container {
+	text-align: left;
+}
+#main {
+}
+a[href^="tel:"] {
+	cursor: default;
+	pointer-events: none;
+}
+@media all and (min-width: 768px) {
+	.sp {
+		display: none !important;
+	}
+}
+@media all and (max-width: 767px) {
+	body {
+		min-width: inherit;
+		font-size: 1.2rem;
+	}
+	a:hover,
+	a:hover img {
+		opacity: 1 !important;
+	}
+	.pc {
+		display: none !important;
+	}
+	a[href^="tel:"] {
+		cursor: pointer;
+		pointer-events: auto;
+	}
+}
+
+
+#cover{
+	z-index: 10000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	background-color: #FFF;
+}
+
+/*------------------------------------------------------------
+	ヘッダー
+------------------------------------------------------------*/
+#gHeader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.1);
+	z-index: 999;
+	min-height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#gHeader h1 {
+	position: absolute;
+	left:50px;
+	top: calc(50% - 25px);
+	width: 90px;
+}
+#gHeader .rBox {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+#gHeader .rBox .btn {
+	height: 100%;
+}
+#gHeader .rBox .btn a {
+	display: flex;
+	height: 100%;
+	width: 162px;
+	justify-content: center;
+	align-items: center;
+	background: #011D57;
+	text-align: center;
+	font-weight: 400;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.02em;
+}
+#gHeader .rBox .btn a:hover {
+	opacity: 0.7;
+}
+#gHeader .rBox button {
+	padding: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	background: none;
+	border: none;
+	width: 17px;
+	position: relative;
+}
+#gHeader .rBox button .white {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all .3s;
+}
+#gHeader .search{
+
+}
+#gHeader input#input_btn{
+position: absolute !important;
+left: 0 !important;
+top:0 !important;
+width: 40px !important;
+height: 34px !important;
+border-bottom: 0px solid #FFF !important;
+	padding: 0 !important;
+}
+#gHeader .rBox input#input_btn2{
+background: none !important;
+text-indent: 0px !important;
+}
+#cse-search-box{
+	display: inline-block;
+	position: relative;
+}
+#gHeader .rBox input {
+	padding: 10px 0 7px 35px;
+	margin-right: -23px;
+	margin-left: -21px;
+	background-color: transparent !important;
+	border: 0;
+	font-size: 1.45rem;
+	border-radius: 0;
+	color: #fff;
+	width: 164px;
+	border-bottom: 1px solid #FFF;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	appearance: none;
+}
+#gHeader .rBox .search {
+	margin: 0 43px 5px 0;
+}
+#gHeader .rBox .search input{
+	display: none;
+	opacity: 0;
+	transition:opacity .3s;
+}
+#gHeader .rBox .search:hover input{
+	display: inline-block;
+	opacity: 1;
+}
+#gHeader.white .rBox .search:hover input{
+	color: #101010;
+}
+#gHeader h1 img {
+	transition: all .3s;
+}
+#gHeader h1 .white {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+}
+#gHeader.white {
+	background-color: #FFF;
+}
+#gHeader.white img {
+	opacity: 0;
+}
+#gHeader.white img.white {
+	opacity: 1;
+}
+#gHeader.white .rBox button .white {
+	opacity: 1;
+}
+#gHeader.white .rBox input {
+	border-bottom: 1px solid #000;
+}
+#gHeader .slideBox {
+	padding: 39px 0 52px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: #FFF;
+}
+#gHeader .slideBox .comBox {
+	width: 1120px;
+}
+#gHeader .slideBox .ttl {
+	margin-bottom: 32px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#gHeader .slideBox .ttl .img {
+	margin-right: 15px;
+}
+#gHeader .slideBox .ttl .txt {
+	font-size: 1.3rem;
+	font-weight: bold;
+	line-height: 1.61;
+}
+#gHeader .slideBox .outList {
+	margin-bottom: -8px;
+	display: flex;
+	justify-content: flex-start;
+}
+#gHeader .slideBox .outList > li {
+	padding-bottom: 38px;
+}
+#gHeader .slideBox .outList > li:not(:last-child) {
+	margin-right: 38px;
+	padding-right: 46px;
+	border-right: 1px solid #E8E8E8;
+}
+#gHeader .slideBox .outList li li:not(:last-child) {
+	margin-bottom: 7px;
+}
+#gHeader .slideBox .outList ul a {
+	padding-left: 20px;
+	position: relative;
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.6;
+}
+#gHeader .slideBox .outList ul a:hover {
+	color: #f00;
+}
+#gHeader .slideBox .outList ul a:before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 13px;
+	height: 1px;
+	background: #c9c9c9;
+	content: "";
+}
+#gHeader .slideBox .outList .linkBox {
+	display: flex;
+	justify-content: space-between;
+}
+#gHeader .slideBox .outList .linkBox ul:not(:last-child) {
+	margin-right: 74px;
+}
+#gHeader .slideBox .link {
+	text-align: right;
+}
+#gHeader .slideBox .link a {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 8px;
+	font-size: 1.5rem;
+	font-weight: 700;
+	width: 150px;
+	text-align: left;
+}
+#gHeader .slideBox .link a:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 140px;
+	height: 2px;
+	background-color: #f00;
+	content: "";
+	transition: all .3s;
+}
+#gHeader .slideBox .link a:hover:after {
+	width: 170px;
+}
+@media all and (max-width: 767px) {
+	#gHeader {
+		padding: 10px 16px;
+		min-height: inherit;
+		background: none;
+		justify-content: space-between;
+		box-sizing: border-box;
+		align-items: flex-start;
+	}
+	#gHeader h1 {
+		position: relative;
+		left: auto;
+		top: auto;
+		width: 64px;
+		z-index: 10;
+	}
+	#gHeader .rBox {
+		display: none;
+	}
+	#gHeader .menu {
+		top: 19px;
+		right: 25px;
+		position: absolute;
+		width: 30px;
+		height: 22px;
+		z-index: 10;
+		cursor: pointer;
+	}
+	#gHeader .menu span {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: #FFF;
+		transition: all .3s;
+	}
+	#gHeader .menu span:first-child {
+		top: 0;
+	}
+	#gHeader .menu span:last-child {
+		top: 20px;
+	}
+	#gHeader .menu.on span {
+		top: 10px !important;
+		opacity: 0;
+	}
+	#gHeader .menu.on span:first-child {
+		opacity: 1;
+		transform: rotate(45deg);
+	}
+	#gHeader .menu.on span:last-child {
+		opacity: 1;
+		transform: rotate(-45deg);
+	}
+	#gHeader .menuBox {
+		padding-bottom: 30px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+		height: 100vh;
+		overflow: auto;
+		text-align: center;
+		background-color: #000;
+		display: none;
+	}
+	#gHeader .menuBox ul {
+		margin: 84px 0 43px;
+	}
+	#gHeader .menuBox li {
+		text-align: center;
+		margin-bottom: 26.5px;
+	}
+	#gHeader .menuBox .search{
+		text-align: center;
+	}
+	#gHeader .menuBox li a {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: #FFF;
+		display: inline-block;
+		letter-spacing: 0.02em;
+	}
+	#gHeader .menuBox li.on a {
+		border-bottom: 2px solid #011D57;
+	}
+	#gHeader .menuBox input {
+		margin: 0 auto 42px;
+		border: none;
+		padding: 5px 5px 5px 30px;
+		border-bottom: 1px solid #FFF;
+		box-sizing: border-box;
+		width: 164px;
+		-webkit-appearance: none;
+		appearance: none;
+background:none;
+
+		color: #FFF;
+	}
+	#gHeader .menuBox input#input_btn{
+		background: url("../../img/common/icon01.png") left center no-repeat;
+		background-size: 16px;
+	}
+
+	#gHeader .menuBox .btn {
+		margin-bottom: 40px;
+	}
+	#gHeader .menuBox .btn a {
+		margin: 0 auto;
+		width: 204px;
+		height: 55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #011D57;
+		color: #FFF;
+		font-size: 1.4rem;
+	}
+	#gHeader.white .menu span {
+		background-color: #000;
+	}
+	#gHeader.white .menu.on span {
+		background-color: #fff;
+	}
+	#gHeader.open .white {
+		opacity: 0;
+	}
+	#gHeader.open img {
+		opacity: 1;
+	}
+	#gHeader.open img.white {
+		opacity: 0;
+	}
+}
+/*------------------------------------------------------------
+	gNavi
+------------------------------------------------------------*/
+#gNavi ul {
+	margin: -1px 50px 0 0;
+	display: flex;
+	justify-content: center;
+}
+#gNavi li {
+	margin: 0 22px;
+}
+#gNavi li a {
+	padding-bottom: 6px;
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #FFF;
+	border-bottom: 2px solid transparent;
+}
+.white #gNavi li a {
+	color: #101010;
+}
+
+#gNavi li a:hover {
+	border-bottom: 2px solid #011D57;
+}
+@media all and (max-width: 767px) {
+	#gNavi {
+		display: none;
+	}
+}
+@media all and (-ms-high-contrast:none) {
+	#gNavi {
+		margin-top: 30px;
+	}
+}
+/*------------------------------------------------------------
+	フッター
+------------------------------------------------------------*/
+#gFooter {
+	padding: 78px 0 46px;
+	background-color: #f1f1f1;
+}
+#gFooter .comBox {
+	width: 1206px;
+}
+#gFooter .linkBox {
+	margin: 0 3px 51px;
+	display: flex;
+	justify-content: space-between;
+}
+#gFooter .linkBox .ttl {
+	margin-bottom: 12px;
+}
+#gFooter .linkBox .ttl a {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.04em;
+}
+#gFooter .linkBox ul a {
+	font-size: 1.4rem;
+	line-height: 1.9;
+	font-weight: 400;
+}
+#gFooter .linkBox a:hover {
+	color: #f00;
+}
+#gFooter .logoBox {
+	margin-bottom: 45px;
+	display: flex;
+	justify-content: space-between;
+}
+#gFooter .logoBox .lBox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#gFooter .logoBox .lBox p {
+	margin: 5px 0 0 17px;
+	font-size: 1.4rem;
+	line-height: 1.64;
+	font-weight: 400;
+}
+#gFooter .logoBox .rBox {
+	margin-right: -10px;
+}
+#gFooter .btmBox {
+	padding-top: 47px;
+	border-top: 1px solid #FFF;
+}
+#gFooter .fNavi {
+	margin: 0 auto 50px;
+	width: 550px;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+}
+#gFooter .btmTxt {
+	margin-bottom: 24px;
+	font-size: 1.4rem;
+	letter-spacing: -0.02em;
+	text-align: center;
+}
+#gFooter .btmTxt img {
+	margin-top: -5px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+#gFooter .fNavi li {
+	margin: 0 11px;
+}
+#gFooter .fNavi li a {
+	font-size: 1.3rem;
+	line-height: 1.8;
+	font-weight: 400;
+}
+#gFooter .fNavi a:hover {
+	color: #f00;
+}
+#gFooter .copyright {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #868686;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+@media all and (max-width: 767px) {
+	#gFooter {
+		padding: 40px 0 36px;
+	}
+	#gFooter .comBox {
+		width: auto;
+	}
+	#gFooter .linkBox {
+		display: none;
+	}
+	#gFooter .logoBox {
+		margin-bottom: 28px;
+		display: block;
+	}
+	#gFooter .logoBox .lBox .logo {
+		width: 78px;
+	}
+	#gFooter .logoBox .lBox p {
+		margin: 5px -10px 0 13px;
+		font-size: 1.2rem;
+		line-height: 1.67;
+	}
+	#gFooter .logoBox .rBox {
+		margin: 23px 15px 0 0;
+		text-align: right;
+	}
+	#gFooter .btmBox {
+		padding-top: 27px;
+		border-top: 1px solid #FFF;
+	}
+	#gFooter .btmTxt {
+		margin-bottom: 26px;
+	}
+	#gFooter .fNavi {
+		margin: 0 auto 41px;
+		width: auto;
+		justify-content: center;
+	}
+	#gFooter .fNavi li {
+		margin: 0 auto 7px;
+		width: 100%;
+		text-align: center;
+	}
+	#gFooter .fNavi li:last-child {
+		margin-bottom: 0;
+	}
+	#gFooter .linkBox a:hover {
+		color: #101010;
+	}
+	#gFooter .fNavi a:hover {
+		color: #101010;
+	}
+}
